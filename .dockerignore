@@ -1,0 +1,6 @@
+# Ignore unnecessary directories and files
+node_modules
+*.log
+*.tmp
+.git
+.github
