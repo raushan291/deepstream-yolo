@@ -20,5 +20,12 @@ docker run --gpus all -it \
     --runtime=nvidia \
     -e DISPLAY=$DISPLAY \
     -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
+    -v $PWD/DeepStream-Yolo:/workspace/DeepStream-Yolo \
     --name $CONTAINER_NAME \
     $DOCKER_IMAGE
+
+# Copy necessary files
+# cp ../ultralytics/export_yoloV8.py .
+# cp ../ultralytics/*.onnx .
+# cp ../ultralytics/labels.txt .
+# cp ../libnvdsinfer_custom_impl_Yolo.so ./nvdsinfer_custom_impl_Yolo
